@@ -1,12 +1,17 @@
 class SimpleThread extends Thread {
-	public SimpleThread(String str) {
+	int startingNumber;
+	int endingNumber;
+
+	public SimpleThread(String str, int startingNumber, int endingNumber) {
 		super(str);
+		this.startingNumber = startingNumber;
+		this.endingNumber = endingNumber;
 	}
 
 	public void run() {
 		System.out.println("Starting --> " + getName());
-		for (int i = 0; i < 3; i++) {
-			System.out.println(" " + getName() + " Loop " + i);
+		for (int i = startingNumber; i < endingNumber; i++) {
+			Main.output
 			try {
 				sleep(1000);
 			} catch (InterruptedException e) {
