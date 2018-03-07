@@ -1,4 +1,3 @@
-package lab01;
 
 class SqrtSumThread extends Thread {
 
